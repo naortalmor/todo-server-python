@@ -11,7 +11,7 @@ class TodoView(viewsets.ModelViewSet):
     serializer_class = TodoSerializers
     queryset = Todo.objects.all()
 
-    @action(detail=False, methods=['POST'], name="bla")
+    @action(detail=False, methods=['POST'], name="delete some")
     def delete_some(self, request):
         queryset = self.get_queryset()
         try:
