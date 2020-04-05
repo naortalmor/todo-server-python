@@ -21,3 +21,10 @@ class TodoView(viewsets.ModelViewSet):
         except:
             raise Http404('Failed to delete')
         return Response({'ok': 'ok'})
+
+    @action(detail=True, methods=['POST'], name="toggleDone")
+    def toggle_done(self, request, pk=None):
+        task = self.get_object()
+        task.is_done = not task.is_done
+        task.save()
+        return Response({'ok', 'ok'})
