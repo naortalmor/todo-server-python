@@ -10,6 +10,7 @@ class Todo(models.Model):
     creation_date = models.DateField(auto_now_add=True)
     due_date = models.DateField(auto_now_add=False)
     category_id = models.IntegerField()
+    user_id = models.IntegerField()
 
     def __str__(self):
         return self.header
