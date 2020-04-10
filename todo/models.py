@@ -1,6 +1,7 @@
 from django.db import models
 from categories.models import Category
 
+
 # Create your models here.
 class Todo(models.Model):
     header = models.CharField(max_length=200)
